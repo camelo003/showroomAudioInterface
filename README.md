@@ -37,7 +37,7 @@ Aqui um detalhamento de como interagir em cada uma dessas portas:
 Nessa porta espera-se receber comandos para tocar os áudios. Os comandos possíveis são ```/sr_17/play``` para tocar um arquivo e ```/sr_17/stop``` para se interromper a reprodução. Nesse mesmo canal ainda é possível enviar o comando ```/stop_all``` para se interromper qualquer áudio que estiver rodando. Atente que nesse caso o trecho _"_17"_ atua especificamente no arquivo de áudio "SHOWROOM_17.wav". É possível saber o código específico de cada arquivo de áudio na tabela a seguir:
 
 | Arquivo | Comando OSC | Início da fala |
-|:---------------:|:-----------:|:--------------------------------------:|
+|:---------------:|:-----------:|:---------------------------------------|
 | SHOWROOM_17.wav | `/sr_17` | _"Oi de novo! Fica muito mais legal..."_ |
 | SHOWROOM_18.wav | `/sr_18` | _"Sabia que ali no fundo tem até um estúdio de som?"_ |
 | SHOWROOM_18_2.wav | `/sr_18_2` | _"Sabia que ali no fundo a gente vai ter um estúdio de som?"_ |
@@ -61,3 +61,12 @@ Nessa porta espera-se receber comandos para tocar os áudios. Os comandos possí
 
 #### Porta 9992
 
+Essa porta deve receber ***constantemente*** a posição relativa do personagem, ou seja, deve ser atualizada dentro do loop da aplicação. Essa coordenada deve estar mapeada no espectro entre -100 e 100, onde -100 é a posição mais a esquerda em que o personagem pode aparecer na tela e 100 é a mais a direita.
+
+O envio deser ser feito atravez do comando `/charPos/xx`, onde ao invés de _'xx'_ deve haver o numero da posição do personagem mapeada.
+
+#### Porta 9994
+
+A configuração inicial desse patch considera as caixas satélites dispostas de forma equidistante onde a primeira está alinhada com o canto esquerdo da tela e a última, o canto direito. Mas caso as caixas estejam dispostas de outra forma, ou de maneira irregular, é possivel "calibrar" a posição das caixas.
+
+Para isso foi feita a aplicação _calibrar.exe_ onde o código fonte e arquivo executável se encontram na pasta _p5Calibrar._ Com esse programinha rodando é só seguir as instruções exibidas na tela.
