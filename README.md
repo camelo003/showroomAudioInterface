@@ -13,6 +13,17 @@ Basicamente, teremos um programa rodando em paralelo à Unity que deve disparar 
     - Abrir as opções _'Audio Settings'_ (Media > Audio Settings) e no campo _Sample rate:_ colocar o valor 48000. Isso porque os arquivos foram fechados nesse taxa de amostragem. *IMPORTANTE!* Nessa jenela é preciso apertar o botão _Save All Settings._ Isso garante que da próxima ves que o Pure Data for aberto ele mantenha essa configuração.
     
 ![image01](/images/showroomTut01.png)
+
 ![image02](/images/showroomTut02.png)
   
 3. Agora basta abrir o arquivo "showroomAudioInterface.pd" no Pure Data, o que pode ser feito em File > Open. E é isso! Essa janela já é patch funcional, pronto para receber comandos e controlar volume da saída de som nas caixas. No Pure Data a programação é feita criando objetos (que são essas caixinhas) e controlando o fluxo com conexões (que são essas linhas). Parece confuso, mas não será necessário mexer em nada aqui!
+
+![image03](/images/showroomTut02.png)
+
+Esse programa fica constantemente "escutando" mensagens osc de 3 portas, cada uma com um propósito:
+
+    - ***Porta 9991,*** para comandos de reproduzir e interromper os áudios com as falas;
+    - ***Porta 9992,*** para saber a posição do personagem durante a experiência;
+    - ***Porta 9993,*** para _calibragem_, isso é, informar ao programa onde as caixas de som estão posicionadas.
+    
+
