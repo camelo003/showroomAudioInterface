@@ -22,13 +22,13 @@ Basicamente, teremos um programa rodando em paralelo à Unity que deve disparar 
 
 Esse programa fica constantemente "escutando" mensagens osc de 3 portas, cada uma com um propósito:
 
-    - ***Porta 9990,*** _recebe_ comandos de reproduzir e interromper os áudios com as falas;
-    - ***Porta 9992,*** _recebe_ a posição do personagem durante a experiência;
-    - ***Porta 9994,*** _recebe_ informações para _calibragem_, isso é, informar ao programa onde as caixas de som estão posicionadas.
+  - ***Porta 9990,*** _recebe_ comandos de reproduzir e interromper os áudios com as falas;
+  - ***Porta 9992,*** _recebe_ a posição do personagem durante a experiência;
+  - ***Porta 9994,*** _recebe_ informações para _calibragem_, isso é, informar ao programa onde as caixas de som estão posicionadas.
     
 Adicionalmente o programa ainda manda um feedback assim que termina a execução de um arquivo:
 
-    - ***Porta 9991,*** O programa envia avisos quando encerra a execução de algum arquivo.
+  - ***Porta 9991,*** O programa envia avisos quando encerra a execução de algum arquivo.
     
 Aqui um detalhamento de como interagir em cada uma dessas portas:
     
