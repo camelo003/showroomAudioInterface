@@ -6,4 +6,10 @@ Basicamente, teremos um programa rodando em paralelo à Unity que deve disparar 
 
 ### Passo-a-passo pra implementação.
 
-1. O software que vai ser a interface de áudio do sof
+1. O software que será a interface de áudio é uma aplicação desenvolvida em Pure Data (essa solução normalmente é chamada de _patch_). O puredata é um programa para síntese, análise e manipulação de som em tempo real, ou seja, não há diferença no seu funcionamente entre estar desenvolvendo e estar executando. O primeiro passo então é baixar o Pure Data que é open source e pode ser baixado para várias platamosmas [*nesse link aqui*](https://puredata.info/downloads/pure-data).
+
+2. Antes mesmo de abrirmos o _patch_ que será a interface de áudio é preciso fazer algumas configurações. São duas:
+    - Garantir que a checkbox DSP esteja ligada;
+    - Abrir as opções _'Audio Settings'_ (Media > Audio Settings) e no campo _Sample rate:_ colocar o valor 48000. Isso porque os arquivos foram fechados nesse taxa de amostragem. *IMPORTANTE!* Nessa jenela é preciso apertar o botão _Save All Settings._ Isso garante que da próxima ves que o Pure Data for aberto ele mantenha essa configuração.
+  
+3. Agora basta abrir o arquivo "" no Pure Data, o que pode ser feito em File > Open. E é isso! Essa janela já é patch funcional, pronto para receber comandos e controlar volume da saída de som nas caixas.
