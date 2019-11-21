@@ -15,8 +15,23 @@ Basicamente, teremos um programa rodando em paralelo à Unity que deve disparar 
 ![image01](/images/showroomTut01.png)
 
 ![image02](/images/showroomTut02.png)
-  
-3. Agora basta abrir o arquivo "showroomAudioInterface.pd" no Pure Data, o que pode ser feito em File > Open. *IMPORTANTE!* É necessário que no mesmo arquivo do patch estaja a pasta _'audios'_ com todos os arquivos .wav dentro. E é isso! Essa janela já é patch funcional, pronto para receber comandos e controlar volume da saída de som nas caixas. No Pure Data a programação é feita criando objetos (que são essas caixinhas) e controlando o fluxo com conexões (que são essas linhas). Parece confuso, mas não será necessário mexer em nada aqui!
+
+3. O patch criado apresenta duas alternativas para distribuição de áudio. Uma delas necessita da instalação de dois externals: *zexy* e *else*. Para isso é preciso ir na opção _'Procurar por externals'_(Ajuda > Procurar por externals), realizar a busca por ambos e instalar as versões mais recentes.
+
+![image04](/images/showroomTut04.png)
+
+![image05](/images/showroomTut05.png)
+
+![image06](/images/showroomTut06.png)
+
+Após a instalação de ambos os externals, é recomendável adicionar ambos à inicialização do Pure Data na opção _'Inicialização'_(Arquivo > Preferências > Inicialização). Deve-se adicionar um external por vez, aplicar as alterações, e reiniciar o Pure Data antes de abrir o arquivo do showroom.
+
+![image07](/images/showroomTut07.png)
+
+![image08](/images/showroomTut08.png)
+
+
+4. Agora basta abrir o arquivo "showroomAudioInterface.pd" no Pure Data, o que pode ser feito em File > Open. *IMPORTANTE!* É necessário que no mesmo arquivo do patch estaja a pasta _'audios'_ com todos os arquivos .wav dentro. E é isso! Essa janela já é patch funcional, pronto para receber comandos e controlar volume da saída de som nas caixas. No Pure Data a programação é feita criando objetos (que são essas caixinhas) e controlando o fluxo com conexões (que são essas linhas). Parece confuso, mas não será necessário mexer em nada aqui!
 
 ![image03](/images/showroomTut03.png)
 
